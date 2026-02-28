@@ -70,7 +70,7 @@ function App() {
 
   const getQuota = async () => {
     const response = await fetch(
-      `https://api.apiflash.com/v1/urltoimage/quota?access_key=${ACCESS_KEY}`
+      "https://api.apiflash.com/v1/urltoimage/quota?access_key=" + ACCESS_KEY
     );
     const result = await response.json();
     setQuota(result);
@@ -127,12 +127,10 @@ function App() {
 
       <br />
 
-      {currentImage ? (
-        <img className="screenshot" src={currentImage} />
-      ) : (
-        <div></div>
+      {currentImage && (
+        <img className="screenshot" src={currentImage} alt="Current screenshot" />
       )}
-
+      
       <div className="container">
         <h3>Current Query Status:</h3>
         <p>
