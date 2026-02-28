@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import APIForm from './Components/APIForm';
-import Gallery from './Components/Gallery';
+import APIForm from './components/APIForm';
+import Gallery from './components/Gallery';
 
 const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 
