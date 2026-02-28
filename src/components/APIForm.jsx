@@ -1,40 +1,41 @@
-const inputsInfo = [
-  "Input a link to any website you would like to take a screenshot of. Do not include https or any protocol in the URL",
-  "Input which image format you would prefer for your screenshot: jpeg, png, or webp",
-  "Input true or false if you would like your website screenshot to not contain any ads",
-  "Input true or false if you would like your website screenshot to not contain of those annoying 'allow cookies' banners",
-  "Choose the width of your screenshot (in pixels)",
-  "Choose the height of your screenshot (in pixels)",
-];
-
 const APIForm = ({ inputs, handleChange, onSubmit }) => {
-    return (
+
+  const inputsInfo = [
+    "Input a link to any website.",
+    "jpeg, png, or webp",
+    "true or false",
+    "true or false",
+    "Width in pixels",
+    "Height in pixels",
+  ];
+
+  return (
     <div>
-        <h2>Select Your Image Attributes:</h2>
+      <h2>Select Your Image Attributes:</h2>
 
-        <form className="form-container">
-            {Object.entries(inputs).map(([key, value], index) => (
-                <li className="form" key={index}>
-                    <h3>{key}</h3>
+      <form className="form-container">
+        {Object.entries(inputs).map(([category, value], index) => (
+          <li className="form" key={index}>
+            <h2>{category}</h2>
 
-                    <input
-                    type="text"
-                    name={key}
-                    value={value}
-                    onChange={handleChange}
-                    className="textbox"
-                    />
-                    
-                    <p>{inputsInfo[index]}</p>
-                </li>
-            ))}
-        </form>
+            <input
+              type="text"
+              name={category}
+              value={value}
+              onChange={handleChange}
+              className="textbox"
+            />
 
-        <button className="button" type="submit" onClick={onSubmit}>
-            Take that Pic! 🎞
-        </button>
+            <p>{inputsInfo[index]}</p>
+          </li>
+        ))}
+      </form>
+
+      <button type="submit" className="button" onClick={onSubmit}>
+        Take that Pic! 🎞
+      </button>
     </div>
-    );
+  );
 };
 
 export default APIForm;

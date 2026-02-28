@@ -1,23 +1,23 @@
 import { useState } from 'react'
 import './App.css'
-import APIForm from './components/APIForm';
+import APIForm from './Components/APIForm';
 
 const ACCESS_KEY = import.meta.env.VITE_APP_ACCESS_KEY;
 
-function App() {
-  const [inputs, setInputs] = useState({
-    url: "",
-    format: "",
-    no_ads: "",
-    no_cookie_banners: "",
-    width: "",
-    height: "",
-  });
+const [inputs, setInputs] = useState({
+  url: "",
+  format: "",
+  no_ads: "",
+  no_cookie_banners: "",
+  width: "",
+  height: "",
+});
+
+const submitForm = () => {
   
-  const submitForm = () => {
+};
 
-  }
-
+function App() {
   return (
     <div className="whole-page">
       <h1>Build Your Own Screenshot! 📸</h1>
