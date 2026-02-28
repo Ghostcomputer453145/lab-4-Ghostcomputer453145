@@ -105,6 +105,8 @@ function App() {
   return (
     <div className="whole-page">
       <h1>Build Your Own Screenshot! 📸</h1>
+      <p><strong>Name:</strong> Yumin Jang</p>
+      <p><strong>Z Number:</strong> Z23655899</p>
 
       {quota ? (
         <p className="quota">
